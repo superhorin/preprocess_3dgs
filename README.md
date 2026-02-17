@@ -1,4 +1,4 @@
-# create_images_and_masks
+# preprocess
 
 動画ファイルから画像（フレーム）を切り出し、物体検出・セグメンテーション学習用のマスク画像を生成するためのツールキットです。
 
@@ -7,11 +7,13 @@
 
 自動マスク生成: Ultralytics (YOLO) 等を利用して、画像内のオブジェクトに対するマスク画像を生成します。
 
+前処理: COLMAPで特徴点抽出とマッチング
+
 ## セットアップ
 ### 1. リポジトリのクローン
 ```
-git clone https://github.com/superhorin/create_images_and_masks.git
-cd create_images_and_masks
+git clone https://github.com/superhorin/preprocess_3dgs
+cd preprocess_3dgs
 ```
 ### 2. 仮想環境の作成（推奨）
 Pythonの依存関係を分離するために仮想環境を作成します。
@@ -37,6 +39,11 @@ python video_to_images.py
 抽出した画像から、学習用のマスク画像を生成します。
 ```
 python create_masks.py
+```
+### ステップ4: 前処理
+抽出した画像から、特徴点抽出とマッチング
+```
+python colmap.py
 ```
 
 ## ディレクトリ構造
