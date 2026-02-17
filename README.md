@@ -45,6 +45,14 @@ python create_masks.py
 ```
 python colmap.py
 ```
+### ステップ0: 360 to images
+360度映像を処理可能に変換
+```
+python 360_to_colmap.py input_video.mp4
+```
+```
+python 360_to_colmap.py input_video.mp4 --interval 5 --width 512 --output_dir my_images
+```
 
 ## ディレクトリ構造
 ```
