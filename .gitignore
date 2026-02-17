@@ -1,3 +1,8 @@
 images/
 masks/
 videos/
+my_dataset/
+venv/
+
+*.pt
+*.zip
