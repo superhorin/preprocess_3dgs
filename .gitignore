@@ -1,8 +1,6 @@
-images/
-masks/
-videos/
-my_dataset/
-venv/
+*/
+
+database.db*
 
 *.pt
 *.zip

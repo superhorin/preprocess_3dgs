@@ -13,6 +13,8 @@ SPARSE_TEMP_PATH = "sparse_temp"
 # 最終出力先（3DGS学習用）
 OUTPUT_PATH = "output_undistorted"
 
+VOCAB_TREE_PATH = "vocab_tree_flickr100K_words32K.bin"
+
 # COLMAPの実行ファイル名（パスが通っていない場合はフルパスで指定してください）
 # Windows例: r"C:\COLMAP\colmap.bat"
 COLMAP_BIN = "colmap" 
@@ -42,7 +44,9 @@ def main():
     # 2. マッチング (Exhaustive Matcher)
     # 画像を追加した場合は、関係性を再構築するために実行が必要です。
     run_command([
-        COLMAP_BIN, "exhaustive_matcher",
+        # COLMAP_BIN, "sequential_matcher",
+        # COLMAP_BIN, "vocab_tree_matcher",
+        COLMAP_BIN, "exhaustive_matcher", #総当たり
         "--database_path", DB_PATH
     ], "特徴点マッチング (Exhaustive Matcher)")
 

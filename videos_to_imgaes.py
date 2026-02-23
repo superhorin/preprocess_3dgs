@@ -13,7 +13,7 @@ OUTPUT_ROOT = "images"
 MODE = "MERGE"
 
 # 間引き設定
-SAVE_EVERY_N_FRAME = 1
+SAVE_EVERY_N_FRAME = 30
 
 # 【画質設定】
 # "png" : 画質劣化ゼロ（最高画質）。ファイルサイズ大。3DGSに最適。
