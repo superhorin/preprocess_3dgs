@@ -24,7 +24,7 @@ source venv/bin/activate  # Windowsの場合は venv\Scripts\activate
 ### 3. 依存ライブラリのインストール
 PyTorchおよび画像処理に必要なライブラリをインストールします。
 ```
-pip install torch torchvision torchaudio ultralytics opencv-python numpy tqdm
+pip install torch torchvision torchaudio ultralytics opencv-python numpy tqdm pycolmap
 ```
 
 ## 使い方
